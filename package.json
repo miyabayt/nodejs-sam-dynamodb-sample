@@ -1,0 +1,43 @@
+{
+  "name": "nodejs-sam-dynamodb-sample",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=local node ./bin/www",
+    "dev": "cross-env NODE_ENV=local node-dev ./bin/www",
+    "test:bs": "cross-env NODE_ENV=test:bs mocha --require test/bs-hooks.js --require test/server-hooks.js test/*.js --timeout 120000",
+    "test:local": "cross-env NODE_ENV=test:local mocha --require test/server-hooks.js test/*.js --timeout 120000"
+  },
+  "dependencies": {
+    "aws-serverless-express": "^3.3.8",
+    "axios": "^0.21.1",
+    "connect-dynamodb": "^2.0.4",
+    "cookie-parser": "~1.4.4",
+    "csurf": "^1.11.0",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.5.0",
+    "helmet": "^3.22.0",
+    "html5shiv": "^3.7.3",
+    "http-errors": "~1.6.3",
+    "lodash": "^4.17.20",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.0",
+    "qs": "^6.9.4",
+    "respond.js": "^1.4.2",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.708.0",
+    "browserstack-local": "^1.4.5",
+    "chai": "^4.2.0",
+    "chromedriver": "^84.0.1",
+    "mocha": "^8.1.1",
+    "request": "^2.88.2",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  }
+}

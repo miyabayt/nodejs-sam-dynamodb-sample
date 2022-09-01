@@ -1,0 +1,58 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "",
+    "Parameters": {
+        "FunctionName": {
+            "Type": "String"
+        },
+        "LatestS3Bucket": {
+            "Type": "String"
+        },
+        "LatestS3Key": {
+            "Type": "String"
+        },
+        "NodeEnv": {
+            "Type": "String"
+        },
+        "MemorySize": {
+            "Type": "Number"
+        },
+        "Role": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "MyLambda": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "FunctionName"
+                },
+                "Code": {
+                    "S3Bucket": {
+                        "Ref": "LatestS3Bucket"
+                    },
+                    "S3Key": {
+                        "Ref": "LatestS3Key"
+                    }
+                },
+                "Handler": "index.handler",
+                "Runtime": "nodejs14.x",
+                "Environment": {
+                    "Variables": {
+                        "NODE_ENV": {
+                            "Ref": "NodeEnv"
+                        }
+                    }
+                },
+                "Timeout": 30,
+                "MemorySize": {
+                    "Ref": "MemorySize"
+                },
+                "Role": {
+                    "Ref": "Role"
+                }
+            }
+        }
+    }
+}

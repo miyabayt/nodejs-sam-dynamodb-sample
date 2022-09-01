@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo 'install phase'
+  build:
+    commands:
+      - echo 'build phase'
+      - npm install
+      - npm prune --production
+artifacts:
+  type: zip
+  files:
+    - "**/*"
+    - "**/.env*"
+  discard-paths: no
