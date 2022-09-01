@@ -23,7 +23,7 @@
     "html5shiv": "^3.7.3",
     "http-errors": "~1.6.3",
     "lodash": "^4.17.20",
-    "moment": "^2.26.0",
+    "moment": "2.29.4",
     "moment-timezone": "^0.5.31",
     "morgan": "~1.9.1",
     "pug": "^3.0.0",
