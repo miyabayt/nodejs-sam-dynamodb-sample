@@ -32,7 +32,7 @@
     "uuid": "^8.1.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.708.0",
+    "aws-sdk": "2.1208.0",
     "browserstack-local": "^1.4.5",
     "chai": "^4.2.0",
     "chromedriver": "^84.0.1",
