@@ -34,7 +34,7 @@
   "devDependencies": {
     "aws-sdk": "2.1208.0",
     "browserstack-local": "1.4.8",
-    "chai": "4.3.4",
+    "chai": "4.3.6",
     "chromedriver": "84.0.1",
     "mocha": "8.4.0",
     "request": "2.88.2",
